@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AgiMarvelTest</string>
+    <string name="label_created_text">Created:</string>
+    <string name="button_comics_label">Comics</string>
+    <string name="button_series_label">Series</string>
+    <string name="button_stories_label">Stories</string>
+    <string name="button_events_label">Events</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="character_list_error">There was an error fetching the Character List</string>
+    <string name="comic_list_error">There was an error fetching the Comic List</string>
+    <string name="retry_button_label">retry</string>
+
+</resources>
