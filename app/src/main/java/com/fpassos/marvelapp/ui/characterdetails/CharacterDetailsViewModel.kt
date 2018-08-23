@@ -21,10 +21,6 @@ class CharacterDetailsViewModel(private val character: MarvelCharacter, private 
     val dateCreated = character.dateCreated?.dateString(style = DateFormat.MEDIUM)
     val description = character.description
 
-    init {
-        loadComics()
-    }
-
     private val _error = MutableLiveData<Boolean>()
     val error: LiveData<Boolean>
         get() = _error
@@ -39,6 +35,10 @@ class CharacterDetailsViewModel(private val character: MarvelCharacter, private 
 
     fun retry() {
         _loading.postValue(true)
+        loadComics()
+    }
+
+    init {
         loadComics()
     }
 

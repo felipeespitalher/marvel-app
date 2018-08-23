@@ -9,21 +9,20 @@ import com.fpassos.marvelapp.R
 
 @BindingAdapter("imageUrl")
 fun loadImage(view: ImageView, url: String?) {
-
-    if (url != null) {
+    url?.let {
         Glide.with(view.context)
                 .load(url)
                 .into(view)
-    } else {
+    } ?: run {
         view.setImageDrawable(null)
     }
 }
 
 @BindingAdapter("visibilityObject")
 fun checkVisibility(view: View, obj: Any?) {
-    if (obj == null) {
+    obj?.let {
         view.visibility = View.GONE
-    } else {
+    } ?: run {
         view.visibility = View.VISIBLE
     }
 }
@@ -39,10 +38,9 @@ fun booleanVisibility(view: View, visible: Boolean) {
 
 @BindingAdapter("placeHolderObject")
 fun checkPlaceHolder(view: View, obj: Any?) {
-    val context = view.context
-    if (obj == null) {
-        view.setBackgroundColor(ContextCompat.getColor(context, R.color.placeholder))
-    } else {
-        view.setBackgroundColor(ContextCompat.getColor(context, R.color.transparent))
+    obj?.let {
+        view.setBackgroundColor(ContextCompat.getColor(view.context, R.color.placeholder))
+    } ?: run {
+        view.setBackgroundColor(ContextCompat.getColor(view.context, R.color.transparent))
     }
 }

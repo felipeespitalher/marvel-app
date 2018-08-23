@@ -19,7 +19,7 @@ class MarvelComicRepositoryTest {
 
     @Before
     fun setup() {
-        whenever(networkAdapter.getComics(any()))
+        whenever(networkAdapter.getComics(any(), any(), any()))
                 .thenReturn(Promise.just(ItemListResponse(0, emptyList())))
     }
 

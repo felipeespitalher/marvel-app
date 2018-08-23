@@ -7,7 +7,6 @@ import com.fpassos.marvelapp.model.Promise
 import com.fpassos.marvelapp.model.data.Comic
 import com.fpassos.marvelapp.model.data.MarvelCharacter
 import com.fpassos.marvelapp.model.repository.ComicRepository
-import com.fpassos.marvelapp.ui.characterdetails.CharacterDetailsViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule

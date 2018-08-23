@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.fpassos.marvelapp.ui.characterslist.CharactersListViewModel" />
@@ -26,6 +25,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlways"
                 android:theme="@style/AppTheme.Toolbar" />
+
         </android.support.design.widget.AppBarLayout>
 
         <android.support.constraint.ConstraintLayout
